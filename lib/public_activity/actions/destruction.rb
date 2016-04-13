@@ -4,7 +4,7 @@ module PublicActivity
     extend ActiveSupport::Concern
 
     included do
-      before_destroy { create_activity :destroy }
+      before_destroy { binding.pry; create_activity :destroy }
     end
   end
 end
