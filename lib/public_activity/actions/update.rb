@@ -4,7 +4,7 @@ module PublicActivity
     extend ActiveSupport::Concern
 
     included do
-      after_update { create_activity :update, if: changed? }
+      after_update { create_activity :update } if changed?
     end
   end
 end
