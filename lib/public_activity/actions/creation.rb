@@ -4,7 +4,7 @@ module PublicActivity
     extend ActiveSupport::Concern
 
     included do
-      after_create { binding.pry; create_activity :create }
+      after_create { create_activity :create }
     end
   end
 end
